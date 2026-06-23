@@ -1,17 +1,25 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.reefapi/reefapi-mcp",
   "description": "One MCP for 160+ live web-data APIs — clean JSON from sites that block scrapers.",
+  "version": "1.0.0",
+  "websiteUrl": "https://reefapi.com/mcp",
   "repository": {
     "url": "https://github.com/reefapi/reefapi-mcp",
     "source": "github"
   },
-  "version": "1.0.0",
-  "websiteUrl": "https://reefapi.com/mcp",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://api.reefapi.com/mcp"
+      "url": "https://api.reefapi.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <your ReefAPI key from reefapi.com>",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
     }
   ]
 }

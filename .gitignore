@@ -5,3 +5,5 @@ venv/
 .env
 *.egg-info/
 .DS_Store
+.mcpregistry_token
+*.token
