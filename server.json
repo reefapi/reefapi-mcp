@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.json",
+  "name": "io.github.reefapi/reefapi-mcp",
+  "description": "One MCP for 160+ live web-data APIs — search, social, e-commerce, real estate, jobs, travel, news, finance. The assistant discovers the right engine, then pulls clean JSON from sites that block scrapers.",
+  "repository": {
+    "url": "https://github.com/reefapi/reefapi-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://reefapi.com/mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.reefapi.com/mcp"
+    }
+  ]
+}
