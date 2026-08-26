@@ -4,14 +4,14 @@
   <img width="380" height="200" src="https://glama.ai/mcp/servers/reefapi/reefapi-mcp/badges/card.svg" alt="ReefAPI MCP server" />
 </a>
 
-**One MCP server for 160+ live web-data APIs** — search engines, social media, e-commerce, real estate, jobs, travel, news, finance, and company/domain/people intelligence. The assistant discovers the right engine, then pulls clean JSON from sites that block scrapers (captcha, login, JS, anti-bot).
+**One MCP server for 185+ live web-data APIs** — search engines, social media, e-commerce, real estate, jobs, travel, news, finance, and company/domain/people intelligence. The assistant discovers the right engine, then pulls clean JSON from sites that block scrapers (captcha, login, JS, anti-bot).
 
 - 🌐 **Homepage:** https://reefapi.com
 - 📚 **Docs:** https://reefapi.com/docs
 - 🔌 **MCP guide:** https://reefapi.com/mcp
 - 🟢 **Status:** https://reefapi.com/status
 
-## Why one server, not 160 tools
+## Why one server, not 185 tools
 
 Emitting one tool per API blows past the ~30–50-tool ceiling where agents stop picking the right tool. ReefAPI uses dynamic discovery — **4 generic tools** let the assistant find the right engine, then call it:
 
@@ -71,7 +71,7 @@ transport with `MCP_TRANSPORT=streamable-http` (used by the hosted endpoint abov
 
 ## Coverage
 
-Search/SEO · Social Media (Reddit, TikTok, Threads, Bluesky) · E-commerce (Amazon, eBay, AliExpress, Etsy, BestBuy) · Real Estate (Zillow, Redfin) · Jobs · Travel · News · Finance · Media/Film · Reputation/Reviews (Glassdoor, Trustpilot) · Company/Domain/People intelligence · Developer utilities — **160+ engines and growing.**
+Search/SEO · Social Media (Reddit, TikTok, Threads, Bluesky) · E-commerce (Amazon, eBay, AliExpress, Etsy, BestBuy) · Real Estate (Zillow, Redfin) · Jobs · Travel · News · Finance · Media/Film · Reputation/Reviews (Glassdoor, Trustpilot) · Company/Domain/People intelligence · Developer utilities — **185+ engines and growing.**
 
 ## License
 
