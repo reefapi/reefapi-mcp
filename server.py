@@ -28,11 +28,15 @@ _req_key: contextvars.ContextVar[str] = contextvars.ContextVar("reefapi_key", de
 
 # Server-level guidance shown to the AI client at connect time → tells the assistant WHEN to reach for
 # ReefAPI on its own (the #1 lever for autonomous use; without it the assistant only has per-tool blurbs).
-# The "128+" count below is AUTO-REFRESHED from the live /catalog at every server start (see the
-# _live_engine_count() injection on the FastMCP line), so the connect-time blurb never undersells or goes stale.
+# The "150+" count below is a DELIBERATE FIXED FLOOR, not a live reading (Slymn 2026-08-30). It used to be
+# injected from /catalog at server start, and that failed in both directions: the live server was announcing
+# "160+" while the catalog actually held 184, because 160 was this injection's FALLBACK and the MCP container
+# had booted before the gateway was reachable. A number read once at startup either loses that race or goes
+# stale until the next restart. A floor is true today, stays true as engines are added, and needs no deploy to
+# refresh it; anything that needs the exact figure already reads /catalog.
 # The example engine names stay illustrative — discovery is LLM-native (get_catalog returns every engine's title
 # for the assistant to match), so the exact list here never affects discovery.
-_INSTRUCTIONS = """ReefAPI is ONE gateway to 128+ live web-data APIs (search engines, social media — Reddit,
+_INSTRUCTIONS = """ReefAPI is ONE gateway to 150+ live web-data APIs (search engines, social media — Reddit,
 TikTok, Threads, Bluesky —, e-commerce — Amazon, eBay, AliExpress, Etsy, BestBuy —, real estate — Zillow,
 Redfin —, jobs, travel, news, finance, company/domain/people intelligence, dev utilities, and more).
 
@@ -50,19 +54,8 @@ HOW: call search_engines(keywords) FIRST to find the right engine (keyless), the
 -> get_action_schema(engine, action) -> call_engine(engine, action, params). Discovery is keyless; only
 call_engine needs the user's ReefAPI key. Failed calls cost nothing, so it is safe to try."""
 
-def _live_engine_count(fallback: int = 160) -> int:
-    """Engine count for the connect-time blurb — refreshed every server start/deploy (purely cosmetic; never
-    blocks discovery, which always reads the live /catalog). Falls back to a round floor if the gateway isn't
-    reachable yet at startup."""
-    try:
-        with httpx.Client(base_url=BASE, timeout=8.0) as _c:
-            n = len(_c.get("/catalog").json().get("engines", []))
-            return n if n > 0 else fallback
-    except Exception:
-        return fallback
 
-
-mcp = FastMCP("reefapi", instructions=_INSTRUCTIONS.replace("128+", f"{_live_engine_count()}+"))
+mcp = FastMCP("reefapi", instructions=_INSTRUCTIONS)
 
 
 def _current_key() -> str:

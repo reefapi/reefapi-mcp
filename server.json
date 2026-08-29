@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.reefapi/reefapi-mcp",
   "title": "ReefAPI",
-  "description": "One MCP server for 180+ live web-data APIs returning clean JSON from sites that block scrapers.",
+  "description": "One MCP server for 150+ live web-data APIs returning clean JSON from sites that block scrapers.",
   "version": "1.27.2",
   "websiteUrl": "https://reefapi.com/mcp",
   "icons": [
