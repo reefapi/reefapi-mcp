@@ -101,6 +101,25 @@ live list. A few of the most-used ones:
 
 Every engine returns the same `{ ok, data, meta, error }` envelope and draws on one shared credit pool.
 
+## Coming from another provider
+
+Side-by-side pages with published prices on both sides and findings from our own live calls,
+including the cases where the other tool is the better pick:
+
+[Bright Data](https://reefapi.com/compare/bright-data-alternative) ·
+[DataForSEO](https://reefapi.com/compare/dataforseo-alternative) ·
+[SerpApi](https://reefapi.com/compare/serpapi-alternative) ·
+[Apify](https://reefapi.com/compare/apify-alternative) ·
+[Oxylabs](https://reefapi.com/compare/oxylabs-alternative) ·
+[ScraperAPI](https://reefapi.com/compare/scraperapi-alternative) ·
+[ScrapingBee](https://reefapi.com/compare/scrapingbee-alternative) ·
+[ZenRows](https://reefapi.com/compare/zenrows-alternative) ·
+[Zyte](https://reefapi.com/compare/zyte-alternative) ·
+[Firecrawl](https://reefapi.com/compare/firecrawl-alternative) ·
+[Diffbot](https://reefapi.com/compare/diffbot-alternative) ·
+[Octoparse](https://reefapi.com/compare/octoparse-alternative) ·
+[ParseHub](https://reefapi.com/compare/parsehub-alternative)
+
 ## License
 
 MIT — see [LICENSE](LICENSE). The APIs are a hosted service with a free tier; see https://reefapi.com.
