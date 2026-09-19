@@ -4,7 +4,7 @@
   <img width="380" height="200" src="https://glama.ai/mcp/servers/reefapi/reefapi-mcp/badges/card.svg" alt="ReefAPI MCP server" />
 </a>
 
-**One MCP server for 150+ live web-data APIs** — search engines, social media, e-commerce, real estate, jobs, travel, news, finance, and company/domain/people intelligence. The assistant discovers the right engine, then pulls clean JSON from sites that block scrapers (captcha, login, JS, anti-bot).
+**One MCP server for 250+ live web-data APIs** — e-commerce and marketplaces, social media, real estate, jobs, travel, news, finance, and company/domain intelligence. The assistant discovers the right engine, then pulls clean JSON from public pages that are hard to scrape (JavaScript rendering, anti-bot).
 
 - 🌐 **Homepage:** https://reefapi.com
 - 📚 **Docs:** https://reefapi.com/docs
@@ -79,8 +79,8 @@ when you want to see the exact params and fields before wiring a call.
 
 ## Coverage
 
-150+ engines across Search/SEO, Social Media, E-commerce, Real Estate, Jobs, Travel, News, Finance,
-Media/Film, Reputation/Reviews, Company/Domain/People intelligence, and developer utilities.
+250+ engines across E-commerce, Social Media, Real Estate, Jobs, Travel, News, Finance,
+Media/Film, Reputation/Reviews, Company/Domain intelligence, and developer utilities.
 Browse the full catalog at [reefapi.com/docs](https://reefapi.com/docs), or call `get_catalog()` for the
 live list. A few of the most-used ones:
 
